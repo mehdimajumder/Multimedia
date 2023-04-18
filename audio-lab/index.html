@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sound Effect Machine</title>
+	<style>
+		body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;	
+		}
+		button {
+			margin: 10px;
+			width: 150px;
+			height: 50px;
+			font-size: 16px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Retro Arcade Sound Effects</h1>
+	<button onclick="playSound('jump.wav')">Jump</button>
+	<button onclick="playSound('bonus.wav')">Bonus</button>
+	<button onclick="playSound('complete.wav')">Mission Complete</button>
+	<button onclick="playSound('dead.wav')">Dead</button>
+	<button onclick="playSound('gameover.wav')">Game Over</button>
+	<audio id="sound" src=""></audio>
+	<script src="audio.js"></script>
+</body>
+</html>

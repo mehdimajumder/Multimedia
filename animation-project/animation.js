@@ -1,0 +1,59 @@
+// alert ("Hello")
+var Scene = {
+    canvas : undefined,
+    canvasContext : undefined,
+	sprite: undefined
+};
+
+Scene.start = function () {
+	// Get the canvas and it's context.
+    Scene.canvas = document.getElementById("canvas2");
+    Scene.canvasContext = Scene.canvas.getContext("2d");
+	
+	// Setup the astronaut to be displayed.
+    Scene.sprite = astronaut;
+	
+	// Attach the image to be used for the sprite.
+	Scene.sprite.img = new Image();
+    Scene.sprite.img.src = Scene.sprite.src;
+	
+	// Wait till the parrot image is loaded before starting the animation.
+	Scene.sprite.img.onload = function() {		
+		Scene.sprite.offset=-Scene.sprite.frames[Scene.sprite.frame].frame.w;
+    	Scene.mainLoop();
+	}
+};
+
+// Once the basic HTML document is loaded and its parsing has taken place, start the scene.
+document.addEventListener( 'DOMContentLoaded', Scene.start);
+
+Scene.clearCanvas = function () {
+    Scene.canvasContext.fillRect(0, 0, Scene.canvas.width, Scene.canvas.height);
+};
+
+Scene.mainLoop = function() {
+    Scene.clearCanvas();
+    Scene.update();
+    Scene.draw();
+	
+	// Animate at 24 frames a second.
+    window.setTimeout(Scene.mainLoop, 1000 /2);
+};
+
+Scene.update = function () {
+	// Set the location of the next frame. 
+  	Scene.sprite.offset+=24;
+	if(Scene.sprite.offset>Scene.canvas.width)
+ 		Scene.sprite.offset=-Scene.sprite.frames[Scene.sprite.frame].frame.w;
+};
+
+Scene.draw = function () {
+	Scene.canvasContext.drawImage(Scene.sprite.img,Scene.sprite.frames[Scene.sprite.frame].frame.x,Scene.sprite.frames[Scene.sprite.frame].frame.y,Scene.sprite.frames[Scene.sprite.frame].frame.w,Scene.sprite.frames[Scene.sprite.frame].frame.h,Scene.sprite.offset,0,Scene.sprite.frames[Scene.sprite.frame].frame.w,Scene.sprite.frames[Scene.sprite.frame].frame.h);
+	
+	// Advance to the next frame.
+	Scene.sprite.frame++;
+
+	// At the end of the sprite sheet, start at the first frame.
+	if(Scene.sprite.frame==Scene.sprite.frames.length)
+		Scene.sprite.frame=0;
+};
