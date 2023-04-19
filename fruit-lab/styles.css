@@ -1,0 +1,14 @@
+canvas {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    height: auto;
+    }
+     body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+  min-height: 500px;
+  }

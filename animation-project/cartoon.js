@@ -1,12 +1,13 @@
-var canvas = document.getElementById("canvas1");
+var canvas = document.querySelector('canvas');
 var ctx = canvas.getContext("2d");
 
+function drawImage() {
 // Background color
-var my_gradient=ctx.createLinearGradient(1100, 0, 0, 1100);
-my_gradient.addColorStop(0, "white");
-my_gradient.addColorStop(.3, "black");
-ctx.fillStyle = my_gradient;
-ctx.fillRect(0, 0, canvas.width, canvas.height)
+// var my_gradient=ctx.createLinearGradient(1100, 0, 0, 1100);
+// my_gradient.addColorStop(0, "white");
+// my_gradient.addColorStop(.3, "black");
+// ctx.fillStyle = my_gradient;
+// ctx.fillRect(0, 0, canvas.width, canvas.height)
 
 // Caption text
 ctx.font = "30px Garamond";
@@ -76,7 +77,7 @@ ctx.fillRect(458, 520, 7, 12);
 ctx.fillRect(508, 550, 7, 12);
 
 // Stars
-for(var i=0; i<100; i++) {
+for(var i=0; i<1; i++) {
     var x = Math.random() * canvas.width;
     var y = Math.random() * canvas.height/1.4;
     var radius = Math.random() * 2;
@@ -104,46 +105,53 @@ ctx.fillRect(585, 335, 27, 10);
 ctx.fillStyle = "red";
 ctx.fillRect(555, 400, 20, 30);
 ctx.fillRect(625, 400, 20, 30);
+// // Planets
+// function planets() {
+//     const centerX = canvas.width/ 4;
+//     const centerY = canvas.height / 4;
 
+requestAnimationFrame(drawImage);
+}
+drawImage();
 
-// Planets
-function planets() {
-    const centerX = canvas.width/ 4;
-    const centerY = canvas.height / 4;
+// // Planets
+// function planets() {
+//     const centerX = canvas.width/ 4;
+//     const centerY = canvas.height / 4;
 
-    // Planet #1
-    ctx.beginPath();
-    ctx.fillStyle = "purple";
-    ctx.arc(centerX, centerY, 20, 0, 2 * Math.PI);
-    ctx.fill();
+//     // Planet #1
+//     ctx.beginPath();
+//     ctx.fillStyle = "purple";
+//     ctx.arc(centerX, centerY, 20, 0, 2 * Math.PI);
+//     ctx.fill();
 
-    // Planet #2
-    ctx.beginPath();
-    ctx.fillStyle = "red";
-    ctx.arc(centerX + 100, centerY, 10, 0, 2 * Math.PI);
-    ctx.fill();
+//     // Planet #2
+//     ctx.beginPath();
+//     ctx.fillStyle = "red";
+//     ctx.arc(centerX + 100, centerY, 10, 0, 2 * Math.PI);
+//     ctx.fill();
 
-    // Planet #3
-    ctx.beginPath();
-    ctx.fillStyle = "green";
-    ctx.arc(centerX - 150, centerY, 15, 0, 2 * Math.PI);
-    ctx.fill();
+//     // Planet #3
+//     ctx.beginPath();
+//     ctx.fillStyle = "green";
+//     ctx.arc(centerX - 150, centerY, 15, 0, 2 * Math.PI);
+//     ctx.fill();
 
-    // Planet #4
-    ctx.beginPath();
-    ctx.fillStyle = "blue";
-    ctx.arc(centerX, centerY - 120, 15, 0, 2 * Math.PI);
-    ctx.fill();
+//     // Planet #4
+//     ctx.beginPath();
+//     ctx.fillStyle = "blue";
+//     ctx.arc(centerX, centerY - 120, 15, 0, 2 * Math.PI);
+//     ctx.fill();
 
-    // Planet #5
-    ctx.beginPath();
-    ctx.fillStyle = "orange";
-    ctx.arc(centerX, centerY + 105, 5, 0, 2 * Math.PI);
-    ctx.fill();
-  }
+//     // Planet #5
+//     ctx.beginPath();
+//     ctx.fillStyle = "orange";
+//     ctx.arc(centerX, centerY + 105, 5, 0, 2 * Math.PI);
+//     ctx.fill();
+//   }
 
-  function animatePlanets() {
-    setInterval(planets, 10);
-  }
+//   function animatePlanets() {
+//     setInterval(planets, 10);
+//   }
 
-  animatePlanets();
+//   animatePlanets();

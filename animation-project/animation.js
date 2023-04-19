@@ -1,4 +1,6 @@
-// alert ("Hello")
+//alert ("Hello")
+"use strict"
+
 var Scene = {
     canvas : undefined,
     canvasContext : undefined,
@@ -7,7 +9,7 @@ var Scene = {
 
 Scene.start = function () {
 	// Get the canvas and it's context.
-    Scene.canvas = document.getElementById("canvas2");
+    Scene.canvas = document.getElementById("Canvas");
     Scene.canvasContext = Scene.canvas.getContext("2d");
 	
 	// Setup the astronaut to be displayed.
@@ -28,6 +30,7 @@ Scene.start = function () {
 document.addEventListener( 'DOMContentLoaded', Scene.start);
 
 Scene.clearCanvas = function () {
+	Scene.canvasContext.fillStyle = "black";
     Scene.canvasContext.fillRect(0, 0, Scene.canvas.width, Scene.canvas.height);
 };
 
@@ -37,7 +40,7 @@ Scene.mainLoop = function() {
     Scene.draw();
 	
 	// Animate at 24 frames a second.
-    window.setTimeout(Scene.mainLoop, 1000 /2);
+    window.setTimeout(Scene.mainLoop, 400);
 };
 
 Scene.update = function () {

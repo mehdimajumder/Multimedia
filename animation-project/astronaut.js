@@ -1,70 +1,91 @@
 astronaut={
-	src : "astronaut.png",
+    src : "astronaut.png",
 	frame:  0,
 	offset: 0,
 	"frames": [
-		{
-			"filename": "tile001.png",
+        {
+            "filename": "tile000.png",
 			"frame": {
-				"x": 115,
+				"x": 1,
 				"y": -250,
-				"w": 115,
-				"h": 600
+				"w": 350,
+				"h": 400
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": -250,
-				"w": 115,
-				"h": 600
+				"w": 350,
+				"h": 400
 			},
 			"sourceSize": {
-				"w": 170,
-				"h": 600
+				"w": 350,
+				"h": 400
 			}
 		},
 		{
-			"filename": "tile002.png",
+            "filename": "tile001.png",
 			"frame": {
-				"x": 225,
+				"x": 1,
 				"y": -250,
-				"w": 115,
-				"h": 600
+				"w": 350,
+				"h": 400
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": -250,
-				"w": 115,
-				"h": 600
+				"w": 350,
+				"h": 400
 			},
 			"sourceSize": {
-				"w": 115,
-				"h": 600
+				"w": 350,
+				"h": 400
 			}
 		},
 		{
-			"filename": "tile003.png",
+            "filename": "tile002.png",
 			"frame": {
-				"x": 420,
+				"x": 113,
 				"y": -250,
-				"w": 115,
-				"h": 600
+				"w": 350,
+				"h": 400
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
 				"x": 0,
 				"y": -250,
-				"w": 150,
-				"h": 600
+				"w": 350,
+				"h": 400
 			},
 			"sourceSize": {
-				"w": 115,
-				"h": 600
+				"w": 350,
+				"h": 400
+			}
+		},
+		{
+            "filename": "tile003.png",
+			"frame": {
+				"x": 113,
+				"y": -250,
+				"w": 350,
+				"h": 400
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": -250,
+				"w": 350,
+				"h": 400
+			},
+			"sourceSize": {
+				"w": 350,
+				"h": 400
 			}
 		}
-	],
+    ],
 }
