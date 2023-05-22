@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Temperature Conversion Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<h1>Temperature Conversion Calculator</h1>
+	<div id="form-container">
+		<form>
+			<label>
+				Temperature:
+				<input type="text" id="temperature">
+			</label>
+			<label>
+				Convert from:
+				<input type="radio" name="from" value="celsius" checked> Celsius
+				<input type="radio" name="from" value="fahrenheit"> Fahrenheit
+			</label>
+			<label>
+				Convert to:
+				<input type="radio" name="to" value="celsius"> Celsius
+				<input type="radio" name="to" value="fahrenheit" checked> Fahrenheit
+			</label>
+			<input type="submit" value="Convert" onclick="convertTemperature()">
+            <button type="reset">Reset</button>
+		</form>
+		
+		<div id="result"></div>
+	</div>
+	
+	<script src="form.js"></script>
+</body>
+</html>
